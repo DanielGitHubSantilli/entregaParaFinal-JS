@@ -84,10 +84,10 @@ body {
     align-items: center;
   }
   form.form-mapa{
+    margin-left: 195px;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-
   }
   .carousel-item img {
     height: 60vh;
@@ -174,12 +174,14 @@ h1, h3, h6 {
 .formatoMapa {
   grid-template-columns: auto;
   padding: auto 100px auto 100px;
-  margin: 10px 0px 20px 100px;
+  /* margin: 10px 0px 20px 100px; */
   flex-wrap: wrap;
-  margin: 20px 0px;
+  /* margin: 20px 0px; */
   height: auto;
   width: auto;
+  margin-left:250px ;
 }
+
 
 .formatoFormulario {
   flex-direction: row;
@@ -314,6 +316,76 @@ input {
   overflow: auto;
 }
 
+form {
+  /* Centrar el formulario en la página */
+  margin: 0 auto;
+  width: 400px;
+  /* Esquema del formulario */
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 1em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+form li + li {
+  margin-top: 1em;
+}
+
+label {
+  /* Tamaño y alineación uniforme */
+  display: inline-block;
+  width: 90px;
+  text-align: right;
+}
+
+input,
+textarea {
+  /* Para asegurarse de que todos los campos de texto tienen la misma configuración de letra
+     Por defecto, las áreas de texto tienen un tipo de letra monoespaciada */
+  font: 1em sans-serif;
+
+  /* Tamaño uniforme del campo de texto */
+  width: 300px;
+  box-sizing: border-box;
+
+  /* Hacer coincidir los bordes del campo del formulario */
+  border: 1px solid #999;
+}
+
+input:focus,
+textarea:focus {
+  /* Destacado adicional para elementos que tienen el cursor */
+  border-color: #000;
+}
+
+textarea {
+  /* Alinear los campos de texto multilínea con sus etiquetas */
+  vertical-align: top;
+
+  /* Proporcionar espacio para escribir texto */
+  height: 5em;
+}
+
+.button {
+  /* Alinear los botones con los campos de texto */
+  padding-left: 90px; /* mismo tamaño que los elementos de la etiqueta */
+}
+
+button {
+  /* Este margen adicional representa aproximadamente el mismo espacio que el espacio
+     entre las etiquetas y sus campos de texto */
+  margin-left: 0.5em;
+}
+
+
+
+
+
 .formatoFormulario {
   display: flex;
   flex-direction: column;
@@ -336,7 +408,19 @@ input {
   display: inline;
   justify-content: space-around;
 }
-
+#enviar,#cancelar{
+  background-color: red;
+  color:antiquewhite;
+  border:10px;
+  border-radius: 7px;
+  box-shadow: #b2b2b2;
+  width: 180px;
+  height: 60px;
+  padding: 20px;
+  cursor:pointer;
+  /* align-self: center; */
+  align-content: center;
+}
 .formatoBotonEnviar {
   display: inline;
   float: left;
@@ -349,7 +433,7 @@ input {
   width: 100px;
 }
 
-.CentrarDiseñador {
+.CentrarDisenador {
   border-radius: 10px;
   text-justify: distribute-all-lines;
   padding: 1px;
@@ -445,7 +529,9 @@ img {
   font-weight: bold;
   list-style: none;
 }
-
+.telefonoDisenador{
+  background-color: #bd9207;
+}
 article, nav, header, footer {
   padding: 1rem;
   margin: 1px;

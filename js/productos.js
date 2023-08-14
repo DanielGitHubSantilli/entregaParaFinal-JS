@@ -1,7 +1,21 @@
+const piepag = document.getElementById("telefono")
+piepag.innerText = "02324-1111111"
+
+
+
 let texto ="Hola. Estás en la sección de Productos."
 const hablar = (texto)=> speechSynthesis.speak(new SpeechSynthesisUtterance(texto))
 
 hablar(texto)
+
+
+let parrafo = document.getElementsByClassName("CentrarDiseñador")
+parrafo.innerHTML= 
+console.log(parrafo.innerhtml)
+
+
+let boton = document.getElementById("crearProd")
+boton.addEventListener("click",crearProducto)
 
 const productos = [];
 
@@ -28,7 +42,13 @@ function crearProducto() {
             return stock = stock - parseInt(prodVendidos)
             console.log(stock)
     };
-    
+  let lista = producto
+if (localStorage.getItem("productos")) {
+    lista = JSON.parse(localStorage.getItem("productos"));
+  } else {
+    lista = lista
+  }
+  
 
     // Agregar el objeto al array
     productos.push(producto); 
@@ -36,9 +56,7 @@ function crearProducto() {
     console.log("Precio IVA incluido: "+ "$ " + (parseFloat(producto.precioIva) + parseFloat(producto.precio)))
 
 }
-// Llamar a la función para crear un nuevo producto
-
-crearProducto();
-
 // Mostrar la lista de productos
 console.table('Lista de productos:', productos);
+
+console.dir(document)
